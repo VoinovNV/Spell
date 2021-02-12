@@ -18,6 +18,9 @@ add_executable(Spell
     src/mainwindow.cpp
     src/mainwindow.hpp
     src/mainwindow.ui
+    src/dict_settings.cpp
+    src/dict_settings.h
+    src/dict_settings.ui
 )
 target_link_libraries(Spell PRIVATE
     Qt5::Widgets

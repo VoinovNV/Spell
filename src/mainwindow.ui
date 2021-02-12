@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>962</width>
-    <height>620</height>
+    <width>815</width>
+    <height>426</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -116,7 +116,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>962</width>
+     <width>815</width>
      <height>22</height>
     </rect>
    </property>
@@ -139,7 +139,7 @@
     <property name="title">
      <string>Settings</string>
     </property>
-    <addaction name="actionPath_to_dictionary"/>
+    <addaction name="actionSet_dictionary"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuSpell"/>
@@ -189,6 +189,11 @@
   <action name="actionPath_to_dictionary">
    <property name="text">
     <string>Path to dictionary</string>
+   </property>
+  </action>
+  <action name="actionSet_dictionary">
+   <property name="text">
+    <string>Set dictionary</string>
    </property>
   </action>
  </widget>
