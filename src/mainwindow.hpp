@@ -33,7 +33,7 @@ private slots:
     void on_nextAct();
     void on_replaceAct();
     void on_stopAct();
-    void on_settAct();
+   // void on_settAct();
     void on_chpath();
 
 private:
@@ -50,5 +50,8 @@ private:
     int cur_pos;
     QScopedPointer<Dict_settings> dict_sett;
     void save_file(QString name);
+    QTextCursor text_cursor;
+    QTextCursor text_cursor__;
+    bool last_word_flag=false;
 };
 #endif // MAINWINDOW_HPP
