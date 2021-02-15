@@ -28,7 +28,7 @@ void Dict_settings::on_AddPathButton_clicked()
     QString filename = QFileDialog::getOpenFileName(this);
     if(filename.length()>4){
         filename.remove(filename.length()-4,4);
-    paths_->append(filename);
+        paths_->append(filename);
     }
     else QMessageBox::warning(this, "Error!", "Error in path");
     update_list();
