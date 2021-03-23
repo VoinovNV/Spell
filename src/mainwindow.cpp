@@ -3,7 +3,6 @@
 #include <QtWidgets/QFileDialog>
 #include <QtWidgets/QMessageBox>
 #include <QTextStream>
-#include <QProcess>
 #include <nuspell/dictionary.hxx>
 #include <nuspell/finder.hxx>
 MainWindow::MainWindow(QWidget* parent) :
