@@ -1,5 +1,5 @@
-#ifndef DICT_SETTINGS_H
-#define DICT_SETTINGS_H
+#ifndef DICT_SETTINGS_HPP
+#define DICT_SETTINGS_HPP
 
 #include <QDialog>
 #include "./ui_dict_settings.h"
@@ -15,7 +15,6 @@ public:
     explicit Dict_settings(QWidget *parent = nullptr);
     ~Dict_settings();
     QStringList* paths_;
-    std::string* ch_path;
     void update_list();
 
 private slots:
@@ -25,7 +24,6 @@ private slots:
 
 private:
     QScopedPointer<Ui::Dict_settings> ui_;
-
 };
 
 #endif // DICT_SETTINGS_H

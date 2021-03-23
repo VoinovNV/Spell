@@ -19,10 +19,18 @@ add_executable(Spell
     src/mainwindow.hpp
     src/mainwindow.ui
     src/dict_settings.cpp
-    src/dict_settings.h
+    src/dict_settings.hpp
     src/dict_settings.ui
+    src/m_dict.cpp
+    src/m_dict.hpp
 )
 target_link_libraries(Spell PRIVATE
     Qt5::Widgets
     Nuspell::nuspell
  )
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/dic/personal.aff
+DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/dic/personal.dic
+DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+add_compile_definitions(CUSTOM_DICTIONARY_PATH="${CMAKE_CURRENT_BINARY_DIR}/personal")
+

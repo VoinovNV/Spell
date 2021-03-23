@@ -65,7 +65,14 @@
             <widget class="QListWidget" name="listWidget"/>
            </item>
            <item>
-            <layout class="QHBoxLayout" name="BUT_LAY" stretch="0,0,0,0">
+            <layout class="QHBoxLayout" name="BUT_LAY" stretch="0,0,0,0,0">
+             <item>
+              <widget class="QPushButton" name="AddButton">
+               <property name="text">
+                <string>Add</string>
+               </property>
+              </widget>
+             </item>
              <item>
               <spacer name="horizontalSpacer">
                <property name="orientation">

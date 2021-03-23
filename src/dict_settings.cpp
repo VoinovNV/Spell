@@ -1,4 +1,4 @@
-#include "dict_settings.h"
+#include "dict_settings.hpp"
 
 #include <QtWidgets/QFileDialog>
 #include <QtWidgets/QMessageBox>
@@ -34,7 +34,10 @@ void Dict_settings::on_AddPathButton_clicked()
     update_list();
 }
 void Dict_settings::on_ChButton(){
-    if(!ui_->listWidget->count() || ui_->listWidget->currentRow()==-1) return;
-    *ch_path=(*paths_)[ui_->listWidget->currentRow()].toStdString();
+    if(!ui_->listWidget->count())
+        QMessageBox::warning(this,"No Dictionary","No default dictionary");
+    paths_->clear();
+    for(int i=0;i<ui_->listWidget->count();i++)
+        paths_->append(ui_->listWidget->item(i)->text());
     this->close();
 }
